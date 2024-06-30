@@ -8,4 +8,10 @@ resultats-eu2024-circonscriptions.csv : https://www.data.gouv.fr/fr/datasets/res
 
 (d'extrême gauche à extrême droite)
 
+### Version carte:
+
+![image](data/political_leaning_repartition_map.png)
+
+### Version liste:
+
 ![image](data/political_leaning_repartition.png)
