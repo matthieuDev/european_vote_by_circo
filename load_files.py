@@ -1,8 +1,9 @@
 import json, numpy as np, pandas as pd
 
-res_by_circo_file = 'resultats-eu2024-circonscriptions.csv'
-details_circo_file = 'bureaux-de-vote-circonscriptions.csv'
-categories_political_party_file = 'categories_political_party.json'
+data_folder = 'imported_data/'
+res_by_circo_file = data_folder + 'resultats-eu2024-circonscriptions.csv'
+details_circo_file = data_folder + 'bureaux-de-vote-circonscriptions.csv'
+categories_political_party_file = data_folder + 'categories_political_party.json'
 
 alignement_score = {
     'Extrême gauche': -2,
