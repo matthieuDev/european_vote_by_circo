@@ -1,13 +1,7 @@
-from load_files import generate_df_votes_by_allignement, ordered_alignement
+from generate_data_frame import generate_normed_df_votes_by_allignement
 import matplotlib.pyplot as plt
 
-df_votes_by_allignement = generate_df_votes_by_allignement()
-
-df_votes_by_allignement = \
-    df_votes_by_allignement.iloc[:, :] / df_votes_by_allignement.values.sum(axis=1, keepdims=True)
-df_votes_by_allignement['allignment_score'] = (df_votes_by_allignement * [-2, -1, -0.5, 0 , 0.5, 1, 2]).sum(axis=1)
-df_votes_by_allignement = df_votes_by_allignement.sort_values('allignment_score')
-df_votes_by_allignement=df_votes_by_allignement[ordered_alignement]
+df_votes_by_allignement = generate_normed_df_votes_by_allignement()
 
 plt.figure()
 ax = df_votes_by_allignement.plot.barh(
